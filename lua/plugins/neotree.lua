@@ -21,14 +21,14 @@ return {
             -- Change type
             added     = "✚", -- NOTE: you can set any of these to an empty string to not show them
             deleted   = "✖",
-            modified  = "",
-            renamed   = "",
+            modified  = "✎",
+            renamed   = "➜",
             -- Status type
-            untracked = "",
-            ignored   = "",
-            unstaged  = "",
-            staged    = "",
-            conflict  = "",
+            untracked = "?",
+            ignored   = "⊘",
+            unstaged  = "⚠",
+            staged    = "✔",
+            conflict  = "⚔",
           },
           align = "right",
         },
