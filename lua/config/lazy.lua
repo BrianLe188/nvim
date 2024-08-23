@@ -44,8 +44,6 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
 		{ import = "lazyvim.plugins.extras.coding.luasnip" },
         { import = "lazyvim.plugins.extras.editor.mini-move" },
-        { import = "lazyvim.plugins.extras.editor.mini-files" },
-        -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
         { import = "lazyvim.plugins.extras.editor.mini-diff" },
         { import = "lazyvim.plugins.extras.util.project" },
 		-- import your plugins

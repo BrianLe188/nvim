@@ -17,6 +17,11 @@ local typescript_snippets = {
         ls.i(1, "constant_name"),
     }),
 
+    ls.s("expoe", {
+        ls.t("export enum "),
+        ls.i(1, "enum_name"),
+    }),
+
     ls.s("expot", {
         ls.t("export type "),
         ls.i(1, "type_name"),
@@ -45,6 +50,11 @@ local typescript_snippets = {
     ls.s("expodc", {
         ls.t("export default const "),
         ls.i(1, "constant_name"),
+    }),
+
+    ls.s("expode", {
+        ls.t("export default enum "),
+        ls.i(1, "enum_name"),
     }),
 
     ls.s("expodt", {
