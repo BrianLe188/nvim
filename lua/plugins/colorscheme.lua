@@ -1,19 +1,35 @@
 -- return {
--- 	{
--- 		"craftzdog/solarized-osaka.nvim",
--- 		lazy = true,
--- 		priority = 1000,
--- 		opts = function()
--- 			return {
--- 				transparent = true,
--- 			}
--- 		end,
+-- 	"craftzdog/solarized-osaka.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	opts = {},
+-- }
+-- return {
+-- 	"doums/darcula",
+-- }
+-- return { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+--
+-- return {
+-- 	"vague2k/vague.nvim",
+-- 	config = function()
+-- 		require("vague").setup({})
+-- 	end,
+-- }
+-- return {
+-- 	"folke/tokyonight.nvim",
+-- 	opts = {
+-- 		transparent = true,
+-- 		styles = {
+-- 			sidebars = "transparent",
+-- 			floats = "transparent",
+-- 		},
 -- 	},
 -- }
-
 return {
-    "HoNamDuong/hybrid.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+	"rebelot/kanagawa.nvim",
+	opts = {
+		transparent = true,
+		background = { dark = "dragon", light = "lotus" },
+	},
 }
+-- return {}
