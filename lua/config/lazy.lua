@@ -30,10 +30,10 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
-		{ import = "lazyvim.plugins.extras.lang.docker" },
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
 		{ import = "lazyvim.plugins.extras.coding.luasnip" },
-		{ import = "lazyvim.plugins.extras.editor.mini-move" },
+		-- { import = "lazyvim.plugins.extras.editor.mini-move" },
+		{ import = "lazyvim.plugins.extras.dap.core" },
 		{ import = "lazyvim.plugins.extras.editor.mini-diff" },
 		{ import = "lazyvim.plugins.extras.util.project" },
 		-- import your plugins

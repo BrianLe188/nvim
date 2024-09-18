@@ -34,22 +34,8 @@ return {
 		},
 		cmdline = {
 			enabled = true,
-			bottom_cmd = true,
+			bottom_cmd = false,
 			view = "cmdline",
 		},
 	},
-	-- opts = function(_, opts)
-	-- 	table.insert(opts.routes, {
-	-- 		filter = {
-	-- 			event = "notify",
-	-- 			find = "No information available",
-	-- 		},
-	-- 		opts = {
-	-- 			skip = true,
-	-- 		},
-	-- 	})
-	-- 	opts.presets.lsp_doc_border = true
-	-- 	opts.cmdline.enabled = false
-	-- 	opts.cmdline.view = "cmdline"
-	-- end,
 }
