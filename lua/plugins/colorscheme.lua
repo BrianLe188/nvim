@@ -5,31 +5,29 @@
 -- 	opts = {},
 -- }
 -- return {
--- 	"doums/darcula",
--- }
--- return { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
---
--- return {
--- 	"vague2k/vague.nvim",
--- 	config = function()
--- 		require("vague").setup({})
--- 	end,
--- }
--- return {
--- 	"folke/tokyonight.nvim",
+-- 	"catppuccin/nvim",
+-- 	name = "catppuccin",
+-- 	priority = 1000,
 -- 	opts = {
--- 		transparent = true,
--- 		styles = {
--- 			sidebars = "transparent",
--- 			floats = "transparent",
--- 		},
+-- 		transparent_background = true,
 -- 	},
 -- }
+--
 return {
-	"rebelot/kanagawa.nvim",
+	"folke/tokyonight.nvim",
 	opts = {
 		transparent = true,
-		background = { dark = "dragon", light = "lotus" },
+		styles = {
+			sidebars = "transparent",
+			floats = "transparent",
+		},
 	},
 }
+-- return {
+-- 	"rebelot/kanagawa.nvim",
+-- 	opts = {
+-- 		transparent = true,
+-- 		background = { dark = "dragon", light = "lotus" },
+-- 	},
+-- }
 -- return {}

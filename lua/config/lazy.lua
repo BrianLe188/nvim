@@ -22,17 +22,15 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "kanagawa",
+				colorscheme = "tokyonight",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
-		{ import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
 		{ import = "lazyvim.plugins.extras.coding.luasnip" },
-		-- { import = "lazyvim.plugins.extras.editor.mini-move" },
 		{ import = "lazyvim.plugins.extras.dap.core" },
 		{ import = "lazyvim.plugins.extras.editor.mini-diff" },
 		{ import = "lazyvim.plugins.extras.util.project" },
@@ -61,4 +59,4 @@ require("lazy").setup({
 	},
 })
 
-vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
