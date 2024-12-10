@@ -22,7 +22,7 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "tokyonight",
+				colorscheme = "solarized-osaka",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.rust" },

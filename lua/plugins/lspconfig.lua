@@ -15,7 +15,6 @@ return {
 		opts = {
 			ensure_installed = {
 				"css-lsp",
-				"prisma-language-server",
 			},
 		},
 	},
