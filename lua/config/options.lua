@@ -10,3 +10,4 @@ vim.opt.number = true
 vim.opt.wrap = true
 
 vim.opt.list = false
+vim.g.snacks_animate = false
