@@ -20,6 +20,7 @@ return {
 		},
 	},
 	opts = {
+		auto_resize = true,
 		filesystem = {
 			follow_current_file = {
 				enabled = true,
