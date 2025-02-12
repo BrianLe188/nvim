@@ -13,7 +13,7 @@
 -- return {
 -- 	"navarasu/onedark.nvim",
 -- 	opts = {
--- 		style = "dark",
+-- 		style = "warmer",
 -- 		transparent = true,
 -- 	},
 -- }
@@ -26,23 +26,23 @@
 -- 	},
 -- }
 --
-return {
-	"folke/tokyonight.nvim",
-	opts = {
-		transparent = true,
-		styles = {
-			sidebars = "transparent",
-			floats = "transparent",
-		},
-	},
-}
 -- return {
--- 	"rebelot/kanagawa.nvim",
+-- 	"folke/tokyonight.nvim",
 -- 	opts = {
 -- 		transparent = true,
--- 		background = { dark = "dragon", light = "lotus" },
+-- 		styles = {
+-- 			sidebars = "transparent",
+-- 			floats = "transparent",
+-- 		},
 -- 	},
 -- }
+return {
+	"rebelot/kanagawa.nvim",
+	opts = {
+		transparent = true,
+		background = { dark = "dragon", light = "lotus" },
+	},
+}
 
 -- return {
 -- 	"Mofiqul/vscode.nvim",
@@ -52,3 +52,12 @@ return {
 -- 	},
 -- }
 -- return {}
+-- return {
+-- 	"ficcdaf/ashen.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	-- configuration is optional!
+-- 	opts = {
+-- 		-- your settings here
+-- 	},
+-- }

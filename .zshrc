@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,6 +108,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.dotnet:$PATH"
 
+. /usr/local/etc/profile.d/z.sh
+
 function parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
@@ -118,10 +120,6 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
 
 # open file in fzf
 function of() {
@@ -190,4 +188,8 @@ function goc() {
   else
     echo "Editor not supported. Please use 'vim', 'nvim', or 'vi'."
   fi
+}
+
+function simg() {
+  wezterm imgcat $1
 }

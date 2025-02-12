@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local act = wezterm.action
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -8,7 +7,9 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 -- config.color_scheme = "AdventureTime"
-
+config.colors = require("kanagawa")
+-- config.window_background_opacity = 0.8
+-- config.macos_window_background_blur = 80
 -- and finally, return the configuration to wezterm
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -19,38 +20,18 @@ config.window_padding = {
 }
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
-config.font_size = 12
+config.font_size = 15
 config.line_height = 1.5
 
+wezterm.on("maximize-window", function(window, pane)
+	window:maximize()
+end)
+
 config.keys = {
-	{ key = "[", mods = "CMD", action = act({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
-	{ key = "]", mods = "CMD", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{
-		key = "w",
-		mods = "CMD",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
-	},
-	{ key = "RightArrow", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Next" }) },
-	{ key = "LeftArrow", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Prev" }) },
-	{
-		key = "n",
-		mods = "SHIFT|CTRL",
-		action = wezterm.action.ToggleFullScreen,
-	},
-	{ key = "UpArrow", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
-	{ key = "DownArrow", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
-	{ key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
-	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
-}
-local dimmer = { brightness = 0.02 }
-config.background = {
-	{
-		source = {
-			File = "/Users/levietanh/Downloads/goku.jpg",
-		},
-		hsb = dimmer,
-		attachment = { Parallax = 0 },
-		width = "100%",
+		key = "M", -- Phím tắt
+		mods = "CTRL|SHIFT", -- Tổ hợp phím (Ctrl + Shift + M)
+		action = wezterm.action.EmitEvent("maximize-window"),
 	},
 }
 

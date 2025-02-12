@@ -1,5 +1,6 @@
 return {
 	"github/copilot.vim",
+	enabled = false,
 	config = function()
 		-- Cấu hình phím tắt cho Copilot
 		vim.g.copilot_no_tab_map = true

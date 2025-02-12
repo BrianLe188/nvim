@@ -22,7 +22,8 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "tokyonight",
+				-- colorscheme = "ashen",
+				colorscheme = "kanagawa",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.omnisharp" },
@@ -58,4 +59,4 @@ require("lazy").setup({
 	},
 })
 
--- vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
