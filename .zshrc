@@ -102,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lzg=lazygit
+alias lzd=lazydocker
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -117,6 +119,7 @@ function parse_git_branch() {
 autoload -Uz compinit && compinit
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

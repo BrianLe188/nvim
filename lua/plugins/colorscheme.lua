@@ -36,14 +36,16 @@
 -- 		},
 -- 	},
 -- }
-return {
-	"rebelot/kanagawa.nvim",
-	opts = {
-		transparent = true,
-		background = { dark = "dragon", light = "lotus" },
-	},
-}
-
+-- return {
+-- 	"rebelot/kanagawa.nvim",
+-- 	opts = {
+-- 		transparent = true,
+-- 		background = { dark = "dragon", light = "lotus" },
+-- 	},
+-- }
+return { "Mofiqul/dracula.nvim", opts = {
+	transparent_bg = true,
+} }
 -- return {
 -- 	"Mofiqul/vscode.nvim",
 -- 	opts = {

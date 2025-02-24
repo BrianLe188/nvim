@@ -22,8 +22,7 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				-- colorscheme = "ashen",
-				colorscheme = "kanagawa",
+				colorscheme = "dracula",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.omnisharp" },
@@ -39,7 +38,6 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	--   install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
 	checker = { enabled = false },
 	performance = {
