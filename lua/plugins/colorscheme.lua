@@ -23,19 +23,20 @@
 -- 	-- priority = 1000,
 -- 	opts = {
 -- 		transparent_background = true,
+-- 		flavour = "macchiato",
 -- 	},
 -- }
 --
--- return {
--- 	"folke/tokyonight.nvim",
--- 	opts = {
--- 		transparent = true,
--- 		styles = {
--- 			sidebars = "transparent",
--- 			floats = "transparent",
--- 		},
--- 	},
--- }
+return {
+	"folke/tokyonight.nvim",
+	opts = {
+		transparent = true,
+		styles = {
+			sidebars = "transparent",
+			floats = "transparent",
+		},
+	},
+}
 -- return {
 -- 	"rebelot/kanagawa.nvim",
 -- 	opts = {
@@ -43,9 +44,9 @@
 -- 		background = { dark = "dragon", light = "lotus" },
 -- 	},
 -- }
-return { "Mofiqul/dracula.nvim", opts = {
-	transparent_bg = true,
-} }
+-- return { "Mofiqul/dracula.nvim", opts = {
+-- 	transparent_bg = true,
+-- } }
 -- return {
 -- 	"Mofiqul/vscode.nvim",
 -- 	opts = {
@@ -62,4 +63,9 @@ return { "Mofiqul/dracula.nvim", opts = {
 -- 	opts = {
 -- 		-- your settings here
 -- 	},
+-- }
+-- return {
+-- 	"ellisonleao/gruvbox.nvim",
+-- 	priority = 1000,
+-- 	config = true,
 -- }

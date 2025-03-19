@@ -1,23 +1,23 @@
-hs.hotkey.bind({ "ctrl", "a", "t" }, "T", function()
+hs.hotkey.bind({ "alt", "t" }, "T", function()
 	hs.application.launchOrFocus("Ghostty")
 end)
 
-hs.hotkey.bind({ "ctrl", "a", "b" }, "B", function()
+hs.hotkey.bind({ "alt", "b" }, "B", function()
 	hs.application.launchOrFocus("Firefox")
 end)
 
-hs.hotkey.bind({ "ctrl", "a", "m" }, "M", function()
+hs.hotkey.bind({ "alt", "m" }, "M", function()
 	hs.application.launchOrFocus("MongoDB Compass")
 end)
 
-hs.hotkey.bind({ "ctrl", "shift" }, "Right", function()
+hs.hotkey.bind({ "alt" }, "Right", function()
 	local win = hs.window.focusedWindow()
 	if win then
 		win:moveToScreen(win:screen():next())
 	end
 end)
 
-hs.hotkey.bind({ "ctrl", "shift" }, "Left", function()
+hs.hotkey.bind({ "alt" }, "Left", function()
 	local win = hs.window.focusedWindow()
 	if win then
 		win:moveToScreen(win:screen():previous())
@@ -39,9 +39,9 @@ function focusScreen(direction)
 	end
 end
 
-hs.hotkey.bind({ "ctrl", "shift" }, "h", function()
+hs.hotkey.bind({ "alt" }, "h", function()
 	focusScreen("left")
 end)
-hs.hotkey.bind({ "ctrl", "shift" }, "l", function()
+hs.hotkey.bind({ "alt" }, "l", function()
 	focusScreen("right")
 end)
