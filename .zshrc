@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -102,13 +102,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export SHELL=/bin/zsh
+
 alias lzg=lazygit
 alias lzd=lazydocker
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$HOME/.dotnet:$PATH"
 
 . /usr/local/etc/profile.d/z.sh
 
@@ -122,7 +122,16 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.gem/bin:$PATH"
+
+export PATH="$HOME/workspace/test/flutter/bin:$PATH"
+
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # open file in fzf
 function of() {
@@ -193,6 +202,7 @@ function goc() {
   fi
 }
 
-function simg() {
-  wezterm imgcat $1
-}
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+. "$HOME/.cargo/env" 
+

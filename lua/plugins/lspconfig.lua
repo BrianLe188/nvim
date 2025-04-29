@@ -2,11 +2,13 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
-			inlay_hints = { enabled = true },
+			inlay_hints = { enabled = false },
 			diagnostics = {
 				float = {
 					border = "rounded",
 				},
+				virtual_text = true,
+				update_in_insert = true,
 			},
 		},
 	},

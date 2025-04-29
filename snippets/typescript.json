@@ -1,0 +1,30 @@
+{
+  "Function Declaration": {
+    "prefix": "func",
+    "body": "function ${1:name}(${2:args}){\n  ${3:body}\n}"
+  },
+  "Arrow Function": {
+    "prefix": "arrow",
+    "body": "const ${1:fn} = (${2:args}) => {\n  ${3}\n}"
+  },
+  "Export default": {
+    "prefix": "expod",
+    "body": "export default ${1:name}"
+  },
+  "Export default function": {
+    "prefix": "expodf",
+    "body": "export default function ${1:name}(${2:args}){\n  ${3:body}\n}"
+  },
+  "Export class": {
+    "prefix": "expoc",
+    "body": "export class ${1:name} {\n ${2:body}\n}"
+  },
+  "Export default class": {
+    "prefix": "expodc",
+    "body": "export default class ${1:name} {\n ${2:body}\n}"
+  },
+  "Export const": {
+    "prefix": "expocn",
+    "body": "export const ${1:name} {\n ${2:body}\n}"
+  }
+}

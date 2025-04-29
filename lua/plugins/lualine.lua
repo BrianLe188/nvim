@@ -1,66 +1,131 @@
-local colors = {
-	blue = "#80a0ff",
-	cyan = "#79dac8",
-	black = "#080808",
-	white = "#c6c6c6",
-	red = "#ff5189",
-	violet = "#d183e8",
-	grey = "#303030",
-}
-
-local bubbles_theme = {
-	normal = {
-		a = { fg = colors.black, bg = colors.violet },
-		b = { fg = colors.white, bg = colors.grey },
-		c = { fg = colors.white },
-	},
-
-	insert = { a = { fg = colors.black, bg = colors.blue } },
-	visual = { a = { fg = colors.black, bg = colors.cyan } },
-	replace = { a = { fg = colors.black, bg = colors.red } },
-
-	inactive = {
-		a = { fg = colors.white, bg = colors.black },
-		b = { fg = colors.white, bg = colors.black },
-		c = { fg = colors.white },
-	},
-}
+-- local colors = {
+-- 	blue = "#80a0ff",
+-- 	cyan = "#79dac8",
+-- 	black = "#080808",
+-- 	white = "#c6c6c6",
+-- 	red = "#ff5189",
+-- 	violet = "#d183e8",
+-- 	grey = "#303030",
+-- }
+--
+-- local bubbles_theme = {
+-- 	normal = {
+-- 		a = { fg = colors.black, bg = colors.violet },
+-- 		b = { fg = colors.white, bg = colors.grey },
+-- 		c = { fg = colors.white },
+-- 	},
+--
+-- 	insert = { a = { fg = colors.black, bg = colors.blue } },
+-- 	visual = { a = { fg = colors.black, bg = colors.cyan } },
+-- 	replace = { a = { fg = colors.black, bg = colors.red } },
+--
+-- 	inactive = {
+-- 		a = { fg = colors.white, bg = colors.black },
+-- 		b = { fg = colors.white, bg = colors.black },
+-- 		c = { fg = colors.white },
+-- 	},
+-- }
 
 return {
-	-- 	{
-	"nvim-lualine/lualine.nvim",
-	opts = function()
-		local lualine = require("lualine")
-		local opts = lualine.config or {}
+	{
+		-- 	{
+		"nvim-lualine/lualine.nvim",
+		opts = function()
+			local lualine = require("lualine")
+			local opts = lualine.config or {}
 
-		opts.options = {
-			theme = bubbles_theme,
-			component_separators = "",
-			section_separators = { left = "", right = "" },
-		}
-		opts.sections = {
-			lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-			lualine_b = { "filename", "branch" },
-			lualine_c = {
-				"%=", --[[ add your center components here in place of this comment ]]
-			},
-			lualine_x = {},
-			lualine_y = { "filetype", "progress" },
-			lualine_z = {
-				{ "location", separator = { right = "" }, left_padding = 2 },
-			},
-		}
-		opts.inactive_sections = {
-			lualine_a = { "filename" },
-			lualine_b = {},
-			lualine_c = {},
-			lualine_x = {},
-			lualine_y = {},
-			lualine_z = { "location" },
-		}
-		opts.tabline = {}
-		opts.extensions = {}
+			opts.options = {
+				theme = "jellybeans",
+				-- component_separators = "",
+				-- section_separators = { left = "", right = "" },
+			}
+			-- opts.sections = {
+			-- 	lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+			-- 	lualine_b = { "filename", "branch" },
+			-- 	lualine_c = {
+			-- 		"%=", --[[ add your center components here in place of this comment ]]
+			-- 	},
+			-- 	lualine_x = {},
+			-- 	lualine_y = { "filetype", "progress" },
+			-- 	lualine_z = {
+			-- 		{ "location", separator = { right = "" }, left_padding = 2 },
+			-- 	},
+			-- }
+			-- opts.inactive_sections = {
+			-- 	lualine_a = { "filename" },
+			-- 	lualine_b = {},
+			-- 	lualine_c = {},
+			-- 	lualine_x = {},
+			-- 	lualine_y = {},
+			-- 	lualine_z = { "location" },
+			-- }
+			-- opts.tabline = {}
+			-- opts.extensions = {}
 
-		return opts
-	end,
+			return opts
+		end,
+	},
+	-- {
+	-- 	"akinsho/bufferline.nvim",
+	-- 	opts = {
+	-- 		options = {
+	-- 			buffer_close_icon = "",
+	-- 			close_command = "bdelete %d",
+	-- 			close_icon = "",
+	-- 			indicator = {
+	-- 				style = "icon",
+	-- 				icon = " ",
+	-- 			},
+	-- 			left_trunc_marker = "",
+	-- 			modified_icon = "●",
+	-- 			offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
+	-- 			right_mouse_command = "bdelete! %d",
+	-- 			right_trunc_marker = "",
+	-- 			show_close_icon = false,
+	-- 			show_tab_indicators = true,
+	-- 		},
+	-- 		highlights = {
+	-- 			fill = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "StatusLineNC" },
+	-- 			},
+	-- 			background = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "StatusLine" },
+	-- 			},
+	-- 			buffer_visible = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "Normal" },
+	-- 			},
+	-- 			buffer_selected = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "Normal" },
+	-- 			},
+	-- 			separator = {
+	-- 				fg = { attribute = "bg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "StatusLine" },
+	-- 			},
+	-- 			separator_selected = {
+	-- 				fg = { attribute = "fg", highlight = "Special" },
+	-- 				bg = { attribute = "bg", highlight = "Normal" },
+	-- 			},
+	-- 			separator_visible = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "StatusLineNC" },
+	-- 			},
+	-- 			close_button = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "StatusLine" },
+	-- 			},
+	-- 			close_button_selected = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "Normal" },
+	-- 			},
+	-- 			close_button_visible = {
+	-- 				fg = { attribute = "fg", highlight = "Normal" },
+	-- 				bg = { attribute = "bg", highlight = "Normal" },
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 }

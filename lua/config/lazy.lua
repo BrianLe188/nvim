@@ -22,15 +22,17 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "tokyonight",
+				colorscheme = "jellybeans",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
+		{ import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
+		{ import = "lazyvim.plugins.extras.coding.mini-snippets" },
 		{ import = "lazyvim.plugins.extras.dap.core" },
 		{ import = "lazyvim.plugins.extras.editor.mini-diff" },
 		-- import your plugins
@@ -57,4 +59,9 @@ require("lazy").setup({
 	},
 })
 
-vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "VertSplit", { bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
