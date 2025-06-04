@@ -13,7 +13,7 @@ return {
 
 			local mini_snippets = require("mini.snippets")
 			return {
-				snippets = { mini_snippets.gen_loader.from_lang() },
+				-- snippets = { mini_snippets.gen_loader.from_lang() },
 
 				-- Following the behavior of vim.snippets,
 				-- the intended usage of <esc> is to be able to temporarily exit into normal mode for quick edits.
@@ -31,9 +31,5 @@ return {
 				},
 			}
 		end,
-	},
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		opts = {},
 	},
 }

@@ -1,15 +1,17 @@
--- return {
--- 	"craftzdog/solarized-osaka.nvim",
--- 	lazy = false,
--- 	priority = 1000,
--- 	opts = {
--- 		transparent = true,
--- 		styles = {
--- 			sidebars = "transparent",
--- 			floats = "transparent",
--- 		},
--- 	},
--- }
+return {
+	"craftzdog/solarized-osaka.nvim",
+	lazy = false,
+	priority = 1000,
+	opts = {
+		transparent = true,
+		styles = {
+			comments = { italic = true },
+			keywords = { italic = true },
+			sidebars = "transparent",
+			floats = "transparent",
+		},
+	},
+}
 -- return {
 -- 	"navarasu/onedark.nvim",
 -- 	opts = {
@@ -70,37 +72,36 @@
 -- 	"ficcdaf/ashen.nvim",
 -- 	lazy = false,
 -- 	priority = 1000,
--- 	-- configuration is optional!
 -- 	opts = {
--- 		-- your settings here
 -- 	},
 -- }
 -- return {
 -- 	"ellisonleao/gruvbox.nvim",
 -- 	priority = 1000,
 -- 	config = true,
+-- 	otps = {},
 -- }
-return {
-	"wtfox/jellybeans.nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {
-		style = "dark", -- "dark" or "light"
-		transparent = false,
-		italics = true,
-		flat_ui = true, -- toggles "flat UI" for pickers
-		palette = nil, -- specify a palette variant: nil (default/"vibrant") or "jellybeans_muted"
-		plugins = {
-			all = false,
-			auto = true, -- will read lazy.nvim and apply the colors for plugins that are installed
-		},
-		on_highlights = function(hl, _c)
-			hl.Constant = { fg = "#00ff00", bold = true }
-		end,
-		on_colors = function(c)
-			local light_bg = "#ffffff"
-			local dark_bg = "#000000"
-			c.background = vim.o.background == "light" and light_bg or dark_bg
-		end,
-	},
-}
+-- return {
+-- 	"wtfox/jellybeans.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	opts = {
+-- 		background = "dark", -- "dark" or "light"
+-- 		transparent = false,
+-- 		italics = true,
+-- 		flat_ui = true, -- toggles "flat UI" for pickers
+-- 		palette = nil, -- specify a palette variant: nil (default/"vibrant") or "jellybeans_muted"
+-- 		plugins = {
+-- 			all = false,
+-- 			auto = true, -- will read lazy.nvim and apply the colors for plugins that are installed
+-- 		},
+-- 		on_highlights = function(hl, _c)
+-- 			hl.Constant = { fg = "#00ff00", bold = true }
+-- 		end,
+-- 		on_colors = function(c)
+-- 			local light_bg = "#ffffff"
+-- 			local dark_bg = "#000000"
+-- 			c.background = vim.o.background == "light" and light_bg or dark_bg
+-- 		end,
+-- 	},
+-- }

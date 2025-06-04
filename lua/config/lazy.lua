@@ -22,7 +22,7 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "jellybeans",
+				colorscheme = "solarized-osaka",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
@@ -32,9 +32,14 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
-		{ import = "lazyvim.plugins.extras.coding.mini-snippets" },
 		{ import = "lazyvim.plugins.extras.dap.core" },
 		{ import = "lazyvim.plugins.extras.editor.mini-diff" },
+		{
+			import = "lazyvim.plugins.extras.editor.snacks_explorer",
+		},
+		{
+			import = "lazyvim.plugins.extras.editor.snacks_picker",
+		},
 		-- import your plugins
 		{ import = "plugins" },
 	},

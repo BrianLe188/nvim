@@ -15,5 +15,5 @@ vim.g.snacks_animate = false
 vim.opt.cursorline = false
 
 -- vim.g.lazyvim_rust_diagnostics = "bacon-ls"
-vim.g.lazyvim_mini_snippets_in_completion = true
+-- vim.g.lazyvim_mini_snippets_in_completion = true
 vim.opt.laststatus = 3

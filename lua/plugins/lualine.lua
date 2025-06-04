@@ -27,44 +27,44 @@
 -- }
 
 return {
-	{
-		-- 	{
-		"nvim-lualine/lualine.nvim",
-		opts = function()
-			local lualine = require("lualine")
-			local opts = lualine.config or {}
-
-			opts.options = {
-				theme = "jellybeans",
-				-- component_separators = "",
-				-- section_separators = { left = "", right = "" },
-			}
-			-- opts.sections = {
-			-- 	lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-			-- 	lualine_b = { "filename", "branch" },
-			-- 	lualine_c = {
-			-- 		"%=", --[[ add your center components here in place of this comment ]]
-			-- 	},
-			-- 	lualine_x = {},
-			-- 	lualine_y = { "filetype", "progress" },
-			-- 	lualine_z = {
-			-- 		{ "location", separator = { right = "" }, left_padding = 2 },
-			-- 	},
-			-- }
-			-- opts.inactive_sections = {
-			-- 	lualine_a = { "filename" },
-			-- 	lualine_b = {},
-			-- 	lualine_c = {},
-			-- 	lualine_x = {},
-			-- 	lualine_y = {},
-			-- 	lualine_z = { "location" },
-			-- }
-			-- opts.tabline = {}
-			-- opts.extensions = {}
-
-			return opts
-		end,
-	},
+	-- {
+	-- 	-- 	{
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	opts = function()
+	-- 		local lualine = require("lualine")
+	-- 		local opts = lualine.config or {}
+	--
+	-- 		opts.options = {
+	-- 			theme = "tokyonight",
+	-- 			-- component_separators = "",
+	-- 			-- section_separators = { left = "", right = "" },
+	-- 		}
+	-- 		-- opts.sections = {
+	-- 		-- 	lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+	-- 		-- 	lualine_b = { "filename", "branch" },
+	-- 		-- 	lualine_c = {
+	-- 		-- 		"%=", --[[ add your center components here in place of this comment ]]
+	-- 		-- 	},
+	-- 		-- 	lualine_x = {},
+	-- 		-- 	lualine_y = { "filetype", "progress" },
+	-- 		-- 	lualine_z = {
+	-- 		-- 		{ "location", separator = { right = "" }, left_padding = 2 },
+	-- 		-- 	},
+	-- 		-- }
+	-- 		-- opts.inactive_sections = {
+	-- 		-- 	lualine_a = { "filename" },
+	-- 		-- 	lualine_b = {},
+	-- 		-- 	lualine_c = {},
+	-- 		-- 	lualine_x = {},
+	-- 		-- 	lualine_y = {},
+	-- 		-- 	lualine_z = { "location" },
+	-- 		-- }
+	-- 		-- opts.tabline = {}
+	-- 		-- opts.extensions = {}
+	--
+	-- 		return opts
+	-- 	end,
+	-- },
 	-- {
 	-- 	"akinsho/bufferline.nvim",
 	-- 	opts = {

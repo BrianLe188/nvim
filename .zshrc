@@ -119,14 +119,17 @@ function parse_git_branch() {
 autoload -Uz compinit && compinit
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
+
+# export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
+unset DOCKER_HOST
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.gem/bin:$PATH"
+eval "$(rbenv init -)"
 
 export PATH="$HOME/workspace/test/flutter/bin:$PATH"
 
-eval "$(rbenv init -)"
+alias aiit="bash ~/workspace/aiit/aiit.sh"
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
@@ -206,3 +209,4 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 . "$HOME/.cargo/env" 
 
+[[ -s "/Users/levietanh/.gvm/scripts/gvm" ]] && source "/Users/levietanh/.gvm/scripts/gvm"
