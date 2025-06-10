@@ -107,9 +107,6 @@ export SHELL=/bin/zsh
 alias lzg=lazygit
 alias lzd=lazydocker
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 . /usr/local/etc/profile.d/z.sh
 
 function parse_git_branch() {
@@ -127,14 +124,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.gem/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PATH="$HOME/workspace/test/flutter/bin:$PATH"
-
 alias aiit="bash ~/workspace/aiit/aiit.sh"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # open file in fzf
 function of() {
@@ -205,8 +197,8 @@ function goc() {
   fi
 }
 
-eval "$(fnm env --use-on-cd --shell zsh)"
+# eval "$(fnm env --use-on-cd --shell zsh)"
 
-. "$HOME/.cargo/env" 
+# API KEY - VOICEAI
 
 [[ -s "/Users/levietanh/.gvm/scripts/gvm" ]] && source "/Users/levietanh/.gvm/scripts/gvm"
