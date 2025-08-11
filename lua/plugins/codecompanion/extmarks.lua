@@ -64,7 +64,7 @@ end
 --- @param start_line number Starting line of the region (0-indexed)
 --- @param end_line number Ending line of the region (0-indexed)
 local function start_spinners(bufnr, ns_id, start_line, end_line)
-	local block_spinner = require("plugins.codecompanion.block_spinner").new({
+	local block_spinner = require("plugins.codecompanion.utils.block_spinner").new({
 		bufnr = bufnr,
 		ns_id = ns_id,
 		start_line = start_line,
@@ -72,7 +72,7 @@ local function start_spinners(bufnr, ns_id, start_line, end_line)
 		opts = virtual_text_spinners_opts,
 	})
 
-	local spinner = require("plugins.codecompanion.spinner").new({
+	local spinner = require("plugins.codecompanion.utils.spinner").new({
 		bufnr = bufnr,
 		ns_id = ns_id,
 		line_num = start_line + math.floor((end_line - start_line) / 2),

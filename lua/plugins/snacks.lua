@@ -13,6 +13,11 @@ return {
 				style = "above_cursor",
 			},
 		},
+		picker = {
+			sources = {
+				explorer = { layout = { layout = { position = "left" } } },
+			},
+		},
 		styles = {
 			above_cursor = {
 				backdrop = false,
