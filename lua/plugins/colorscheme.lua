@@ -19,18 +19,64 @@
 -- 		transparent = true,
 -- 	},
 -- }
--- return {
--- 	"catppuccin/nvim",
--- 	name = "catppuccin",
--- 	priority = 1000,
--- 	opts = {
--- 		transparent_background = true,
--- 		flavour = "macchiato",
--- 		float = {
--- 			transparent = true,
--- 		},
--- 	},
--- }
+return {
+	"catppuccin/nvim",
+	lazy = true,
+	name = "catppuccin",
+	opts = {
+		transparent_background = true,
+		integrations = {
+			aerial = true,
+			alpha = true,
+			cmp = true,
+			dashboard = true,
+			flash = true,
+			fzf = true,
+			grug_far = true,
+			gitsigns = true,
+			headlines = true,
+			illuminate = true,
+			indent_blankline = { enabled = true },
+			leap = true,
+			lsp_trouble = true,
+			mason = true,
+			markdown = true,
+			mini = true,
+			native_lsp = {
+				enabled = true,
+				underlines = {
+					errors = { "undercurl" },
+					hints = { "undercurl" },
+					warnings = { "undercurl" },
+					information = { "undercurl" },
+				},
+			},
+			navic = { enabled = true, custom_bg = "lualine" },
+			neotest = true,
+			neotree = true,
+			noice = true,
+			notify = true,
+			semantic_tokens = true,
+			snacks = true,
+			telescope = true,
+			treesitter = true,
+			treesitter_context = true,
+			which_key = true,
+			diffview = true,
+		},
+	},
+	specs = {
+		{
+			"akinsho/bufferline.nvim",
+			optional = true,
+			opts = function(_, opts)
+				if (vim.g.colors_name or ""):find("catppuccin") then
+					opts.highlights = require("catppuccin.groups.integrations.bufferline").get_theme()
+				end
+			end,
+		},
+	},
+}
 --
 -- return {
 -- 	"folke/tokyonight.nvim",
@@ -158,88 +204,112 @@
 -- 	},
 -- }
 -- return { "projekt0n/github-nvim-theme", name = "github-theme" }
-return {
-	-- Our local colorscheme as a plugin
-	dir = vim.fn.stdpath("config"),
-	name = "minimal-colorscheme",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		local set_hl = vim.api.nvim_set_hl
-
-		-- Clear existing highlights
-		vim.cmd("highlight clear")
-		if vim.fn.exists("syntax_on") == 1 then
-			vim.cmd("syntax reset")
-		end
-		vim.o.termguicolors = true
-		vim.g.colors_name = "minimal"
-
-		-- Basic UI elements
-		set_hl(0, "Normal", { bg = "#000000", fg = "#e0e0e0" })
-		set_hl(0, "NonText", { bg = "#000000", fg = "#000000" })
-		set_hl(0, "CursorLine", { bg = "NONE" })
-		set_hl(0, "LineNr", { fg = "#606060" })
-		set_hl(0, "CursorLineNr", { fg = "#e0e0e0" })
-		set_hl(0, "SignColumn", { bg = "#000000" })
-		set_hl(0, "StatusLine", { bold = true, bg = "#1a1a1a", fg = "#b0b0b0" })
-		set_hl(0, "StatusLineNC", { bold = true, bg = "#1a1a1a", fg = "#606060" })
-		set_hl(0, "Directory", { fg = "#b0b0b0" })
-		set_hl(0, "Visual", { bg = "#4d4d4d" })
-		set_hl(0, "Search", { bg = "#505050", fg = "#e0e0e0" })
-		set_hl(0, "CurSearch", { bg = "#b0b0b0", fg = "#000000" })
-		set_hl(0, "IncSearch", { bg = "#b0b0b0", fg = "#000000" })
-		set_hl(0, "MatchParen", { bg = "#606060", fg = "#e0e0e0" })
-		set_hl(0, "Pmenu", { bg = "#222222", fg = "#e0e0e0" })
-		set_hl(0, "PmenuSel", { bg = "#505050", fg = "#e0e0e0" })
-		set_hl(0, "PmenuSbar", { bg = "#3a3a3a", fg = "#e0e0e0" })
-		set_hl(0, "VertSplit", { fg = "#505050" })
-		set_hl(0, "MoreMsg", { fg = "#b0b0b0" })
-		set_hl(0, "Question", { fg = "#b0b0b0" })
-		set_hl(0, "Title", { fg = "#b0b0b0" })
-		set_hl(0, "NonText", { fg = "#20c997", bg = "NONE" })
-
-		set_hl(0, "FloatBorder", { fg = "#505050" })
-		set_hl(0, "NormalFloat", { bg = "#111111", fg = "#e0e0e0" })
-		set_hl(0, "TelescopeBorder", { fg = "#505050" })
-
-		-- Syntax highlighting
-		set_hl(0, "Comment", { fg = "#757575", italic = true })
-		set_hl(0, "Constant", { fg = "#ffffff" })
-		set_hl(0, "Identifier", { fg = "#ffffff" })
-		set_hl(0, "Statement", { fg = "#ffffff" })
-		set_hl(0, "PreProc", { fg = "#ffffff" })
-		set_hl(0, "Type", { fg = "#ffffff" })
-		set_hl(0, "Special", { fg = "#ffffff" })
-
-		-- Refined syntax highlighting
-		set_hl(0, "String", { fg = "#ffffff" })
-		set_hl(0, "Number", { fg = "#ffffff" })
-		set_hl(0, "Boolean", { fg = "#ffffff" })
-		set_hl(0, "Function", { fg = "#ffffff" })
-		set_hl(0, "Keyword", { fg = "#ffffff", italic = true })
-
-		-- HTML syntax
-		set_hl(0, "Tag", { fg = "#ffffff" })
-		set_hl(0, "@tag.delimiter", { fg = "#ffffff" })
-		set_hl(0, "@tag.attribute", { fg = "#ffffff" })
-
-		-- Messages
-		set_hl(0, "ErrorMsg", { fg = "#ff8888" })
-		set_hl(0, "Error", { fg = "#ff8888" })
-		set_hl(0, "DiagnosticError", { fg = "#ff8888" })
-		set_hl(0, "DiagnosticVirtualTextError", { bg = "#1a0000", fg = "#ff0000" })
-		set_hl(0, "WarningMsg", { fg = "#ffe08a" })
-		set_hl(0, "DiagnosticWarn", { fg = "#ffe08a" })
-		set_hl(0, "DiagnosticVirtualTextWarn", { bg = "#1a1400", fg = "#ffcc00" })
-		set_hl(0, "DiagnosticInfo", { fg = "#87cfff" })
-		set_hl(0, "DiagnosticVirtualTextInfo", { bg = "#00141a", fg = "#00ccff" })
-		set_hl(0, "DiagnosticHint", { fg = "#90ffff" })
-		set_hl(0, "DiagnosticVirtualTextHint", { bg = "#001a1a", fg = "#00ffff" })
-		set_hl(0, "DiagnosticOk", { fg = "#88ff99" })
-
-		-- Common plugins
-		set_hl(0, "CopilotSuggestion", { fg = "#808080" })
-		set_hl(0, "TelescopeSelection", { bg = "#4d4d4d" })
-	end,
-}
+-- return {
+-- 	-- Our local colorscheme as a plugin
+-- 	dir = vim.fn.stdpath("config"),
+-- 	name = "minimal-colorscheme",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		local set_hl = vim.api.nvim_set_hl
+--
+-- 		-- Clear existing highlights
+-- 		vim.cmd("highlight clear")
+-- 		if vim.fn.exists("syntax_on") == 1 then
+-- 			vim.cmd("syntax reset")
+-- 		end
+-- 		vim.o.termguicolors = true
+-- 		vim.g.colors_name = "minimal"
+--
+-- 		-- Basic UI elements
+-- 		set_hl(0, "Normal", { bg = "NONE", fg = "#e0e0e0" })
+-- 		set_hl(0, "NonText", { bg = "NONE", fg = "#000000" })
+-- 		set_hl(0, "CursorLine", { bg = "NONE" })
+-- 		set_hl(0, "LineNr", { fg = "#606060" })
+-- 		set_hl(0, "CursorLineNr", { fg = "#e0e0e0" })
+-- 		set_hl(0, "SignColumn", { bg = "#000000" })
+-- 		set_hl(0, "StatusLine", { bold = true, bg = "#1a1a1a", fg = "#b0b0b0" })
+-- 		set_hl(0, "StatusLineNC", { bold = true, bg = "#1a1a1a", fg = "#606060" })
+-- 		set_hl(0, "Directory", { fg = "#b0b0b0" })
+-- 		set_hl(0, "Visual", { bg = "#4d4d4d" })
+-- 		set_hl(0, "Search", { bg = "#505050", fg = "#e0e0e0" })
+-- 		set_hl(0, "CurSearch", { bg = "#b0b0b0", fg = "#000000" })
+-- 		set_hl(0, "IncSearch", { bg = "#b0b0b0", fg = "#000000" })
+-- 		set_hl(0, "MatchParen", { bg = "#606060", fg = "#e0e0e0" })
+-- 		set_hl(0, "Pmenu", { bg = "#222222", fg = "#e0e0e0" })
+-- 		set_hl(0, "PmenuSel", { bg = "#505050", fg = "#e0e0e0" })
+-- 		set_hl(0, "PmenuSbar", { bg = "#3a3a3a", fg = "#e0e0e0" })
+-- 		set_hl(0, "VertSplit", { fg = "#505050" })
+-- 		set_hl(0, "MoreMsg", { fg = "#b0b0b0" })
+-- 		set_hl(0, "Question", { fg = "#b0b0b0" })
+-- 		set_hl(0, "Title", { fg = "#b0b0b0" })
+-- 		set_hl(0, "NonText", { fg = "#20c997", bg = "NONE" })
+--
+-- 		set_hl(0, "FloatBorder", { fg = "#505050" })
+-- 		set_hl(0, "NormalFloat", { bg = "#111111", fg = "#e0e0e0" })
+-- 		set_hl(0, "TelescopeBorder", { fg = "#505050" })
+--
+-- 		-- Syntax highlighting
+-- 		set_hl(0, "Comment", { fg = "#757575", italic = true })
+-- 		set_hl(0, "Constant", { fg = "#ffffff" })
+-- 		set_hl(0, "Identifier", { fg = "#ffffff" })
+-- 		set_hl(0, "Statement", { fg = "#ffffff" })
+-- 		set_hl(0, "PreProc", { fg = "#ffffff" })
+-- 		set_hl(0, "Type", { fg = "#ffffff" })
+-- 		set_hl(0, "Special", { fg = "#ffffff" })
+--
+-- 		-- Refined syntax highlighting
+-- 		set_hl(0, "String", { fg = "#ffffff" })
+-- 		set_hl(0, "Number", { fg = "#ffffff" })
+-- 		set_hl(0, "Boolean", { fg = "#ffffff" })
+-- 		set_hl(0, "Function", { fg = "#ffffff" })
+-- 		set_hl(0, "Keyword", { fg = "#ffffff", italic = true })
+--
+-- 		-- HTML syntax
+-- 		set_hl(0, "Tag", { fg = "#ffffff" })
+-- 		set_hl(0, "@tag.delimiter", { fg = "#ffffff" })
+-- 		set_hl(0, "@tag.attribute", { fg = "#ffffff" })
+--
+-- 		-- Messages
+-- 		set_hl(0, "ErrorMsg", { fg = "#ff8888" })
+-- 		set_hl(0, "Error", { fg = "#ff8888" })
+-- 		set_hl(0, "DiagnosticError", { fg = "#ff8888" })
+-- 		set_hl(0, "DiagnosticVirtualTextError", { bg = "#1a0000", fg = "#ff0000" })
+-- 		set_hl(0, "WarningMsg", { fg = "#ffe08a" })
+-- 		set_hl(0, "DiagnosticWarn", { fg = "#ffe08a" })
+-- 		set_hl(0, "DiagnosticVirtualTextWarn", { bg = "#1a1400", fg = "#ffcc00" })
+-- 		set_hl(0, "DiagnosticInfo", { fg = "#87cfff" })
+-- 		set_hl(0, "DiagnosticVirtualTextInfo", { bg = "#00141a", fg = "#00ccff" })
+-- 		set_hl(0, "DiagnosticHint", { fg = "#90ffff" })
+-- 		set_hl(0, "DiagnosticVirtualTextHint", { bg = "#001a1a", fg = "#00ffff" })
+-- 		set_hl(0, "DiagnosticOk", { fg = "#88ff99" })
+--
+-- 		-- Common plugins
+-- 		set_hl(0, "CopilotSuggestion", { fg = "#808080" })
+-- 		set_hl(0, "TelescopeSelection", { bg = "#4d4d4d" })
+-- 	end,
+-- return {
+-- 	"armannikoyan/rusty",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	opts = {
+-- 		transparent = true,
+-- 		italic_comments = true,
+-- 		underline_current_line = true,
+-- 		colors = {
+-- 			foreground = "#c5c8c6",
+-- 			background = "#1d1f21",
+-- 			selection = "#727272",
+-- 			line = "#282a2e",
+-- 			comment = "#969896",
+-- 			red = "#cc6666",
+-- 			orange = "#de935f",
+-- 			yellow = "#f0c674",
+-- 			green = "#b5bd68",
+-- 			aqua = "#8abeb7",
+-- 			blue = "#81a2be",
+-- 			purple = "#b294bb",
+-- 			window = "#4d5057",
+-- 		},
+-- 	},
+-- }

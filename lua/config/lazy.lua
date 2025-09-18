@@ -22,9 +22,11 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "minimal",
+				colorscheme = "catppuccin",
 			},
 		},
+		{ import = "lazyvim.plugins.extras.lang.prisma" },
+		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
 		{ import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
@@ -39,6 +41,9 @@ require("lazy").setup({
 		},
 		{
 			import = "lazyvim.plugins.extras.editor.snacks_picker",
+		},
+		{
+			import = "lazyvim.plugins.extras.editor.inc-rename",
 		},
 		-- import your plugins
 		{ import = "plugins" },

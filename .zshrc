@@ -106,6 +106,7 @@ export SHELL=/bin/zsh
 
 alias lzg=lazygit
 alias lzd=lazydocker
+alias aseprite="~/workspace/aseprite-release/bin/aseprite &"
 
 . /usr/local/etc/profile.d/z.sh
 
@@ -117,16 +118,17 @@ autoload -Uz compinit && compinit
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
-# export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
-unset DOCKER_HOST
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+# unset DOCKER_HOST
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.gem/bin:$PATH"
 eval "$(rbenv init -)"
 
-alias aiit="bash ~/workspace/aiit/aiit.sh"
+eval "$(mise activate zsh)"
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="${PWD}/depot_tools:${PATH}"
 
 # open file in fzf
 function of() {
@@ -198,7 +200,3 @@ function goc() {
 }
 
 # eval "$(fnm env --use-on-cd --shell zsh)"
-
-# API KEY - VOICEAI
-
-[[ -s "/Users/levietanh/.gvm/scripts/gvm" ]] && source "/Users/levietanh/.gvm/scripts/gvm"

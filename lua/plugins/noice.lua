@@ -31,6 +31,7 @@ return {
 		presets = {
 			bottom_search = true,
 			lsp_doc_border = true,
+			inc_rename = false,
 		},
 		cmdline = {
 			enabled = true,

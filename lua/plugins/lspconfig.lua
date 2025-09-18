@@ -15,10 +15,13 @@ return {
 				virtual_text = true,
 				update_in_insert = true,
 			},
+			folds = {
+				enabled = false,
+			},
 		},
 	},
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {
 			ensure_installed = {
 				"css-lsp",
