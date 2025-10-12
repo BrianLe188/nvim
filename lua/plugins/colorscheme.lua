@@ -19,70 +19,70 @@
 -- 		transparent = true,
 -- 	},
 -- }
-return {
-	"catppuccin/nvim",
-	lazy = true,
-	name = "catppuccin",
-	opts = {
-		transparent_background = true,
-		integrations = {
-			aerial = true,
-			alpha = true,
-			cmp = true,
-			dashboard = true,
-			flash = true,
-			fzf = true,
-			grug_far = true,
-			gitsigns = true,
-			headlines = true,
-			illuminate = true,
-			indent_blankline = { enabled = true },
-			leap = true,
-			lsp_trouble = true,
-			mason = true,
-			markdown = true,
-			mini = true,
-			native_lsp = {
-				enabled = true,
-				underlines = {
-					errors = { "undercurl" },
-					hints = { "undercurl" },
-					warnings = { "undercurl" },
-					information = { "undercurl" },
-				},
-			},
-			navic = { enabled = true, custom_bg = "lualine" },
-			neotest = true,
-			neotree = true,
-			noice = true,
-			notify = true,
-			semantic_tokens = true,
-			snacks = true,
-			telescope = true,
-			treesitter = true,
-			treesitter_context = true,
-			which_key = true,
-			diffview = true,
-		},
-	},
-	specs = {
-		{
-			"akinsho/bufferline.nvim",
-			optional = true,
-		},
-	},
-}
---
 -- return {
--- 	"folke/tokyonight.nvim",
+-- 	"catppuccin/nvim",
+-- 	lazy = true,
+-- 	name = "catppuccin",
 -- 	opts = {
--- 		transparent = true,
--- 		styles = {
--- 			sidebars = "transparent",
--- 			floats = "transparent",
+-- 		transparent_background = true,
+-- 		integrations = {
+-- 			aerial = true,
+-- 			alpha = true,
+-- 			cmp = true,
+-- 			dashboard = true,
+-- 			flash = true,
+-- 			fzf = true,
+-- 			grug_far = true,
+-- 			gitsigns = true,
+-- 			headlines = true,
+-- 			illuminate = true,
+-- 			indent_blankline = { enabled = true },
+-- 			leap = true,
+-- 			lsp_trouble = true,
+-- 			mason = true,
+-- 			markdown = true,
+-- 			mini = true,
+-- 			native_lsp = {
+-- 				enabled = true,
+-- 				underlines = {
+-- 					errors = { "undercurl" },
+-- 					hints = { "undercurl" },
+-- 					warnings = { "undercurl" },
+-- 					information = { "undercurl" },
+-- 				},
+-- 			},
+-- 			navic = { enabled = true, custom_bg = "lualine" },
+-- 			neotest = true,
+-- 			neotree = true,
+-- 			noice = true,
+-- 			notify = true,
+-- 			semantic_tokens = true,
+-- 			snacks = true,
+-- 			telescope = true,
+-- 			treesitter = true,
+-- 			treesitter_context = true,
+-- 			which_key = true,
+-- 			diffview = true,
+-- 		},
+-- 	},
+-- 	specs = {
+-- 		{
+-- 			"akinsho/bufferline.nvim",
+-- 			optional = true,
 -- 		},
 -- 	},
 -- }
+--
+return {
+	"folke/tokyonight.nvim",
+	opts = {
+		transparent = true,
+		styles = {
+			sidebars = "transparent",
+			floats = "transparent",
+		},
+	},
+}
 -- return {
 -- 	"rebelot/kanagawa.nvim",
 -- 	opts = {
@@ -306,5 +306,12 @@ return {
 -- 			purple = "#b294bb",
 -- 			window = "#4d5057",
 -- 		},
+-- 	},
+-- }
+-- return {
+-- 	{
+-- 		"sainnhe/everforest",
+-- 		lazy = false,
+-- 		priority = 1000,
 -- 	},
 -- }

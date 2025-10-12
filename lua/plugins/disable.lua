@@ -1,7 +1,7 @@
 return {
-	{ "catppuccin/nvim", enabled = true },
-	{ "folke/tokyonight.nvim", enabled = false },
-	{ "nvim-mini/mini.icons", enabled = false },
+	{ "catppuccin/nvim", enabled = false },
+	{ "folke/tokyonight.nvim", enabled = true },
+	{ "nvim-mini/mini.icons", enabled = true },
 	{ "folke/todo-comments.nvim", enabled = false },
 	{
 		"ibhagwan/fzf-lua",

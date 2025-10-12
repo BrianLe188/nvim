@@ -22,7 +22,7 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "catppuccin",
+				colorscheme = "tokyonight",
 			},
 		},
 		{ import = "lazyvim.plugins.extras.lang.prisma" },
